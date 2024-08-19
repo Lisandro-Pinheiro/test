@@ -58,7 +58,7 @@ Clone o repositório:
 
 bash
 Copiar código
-git clone https://github.com/seu-usuario/react-test-functions.git
+git clone https://github.com/Lisandro-Pinheiro/test.git
 cd react-test-functions
 
 Instale as dependências:
