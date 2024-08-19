@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+TestComponent - Funções Utilitárias em React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Descrição
 
-## Available Scripts
+Este projeto é um componente React que testa diversas funções utilitárias, como transformação de dados, busca de dados via API, contagem de ocorrências, agrupamento de itens por categoria, e mesclagem de arrays de objetos. As funções são implementadas em um módulo separado (myFunctions.js) e o componente TestComponent exibe os resultados dessas operações.
 
-In the project directory, you can run:
+Funcionalidades
 
-### `npm start`
+1. Transformação de Dados
+Filtra usuários ativos e ordena-os por nome em ordem alfabética.
+Função: transformData(users)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Busca de Dados via API
+Busca dados de usuários da API JSONPlaceholder e filtra usuários cujo nome de usuário começa com a letra "C".
+Função: fetchUserData()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Contagem de Ocorrências
+Conta o número de ocorrências de cada elemento em um array.
+Função: countOccurrences(array)
 
-### `npm test`
+4. Agrupamento por Categoria
+Agrupa itens em um array com base em uma categoria.
+Função: groupByCategory(items)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Mesclagem de Arrays de Objetos
+Mescla dois arrays de objetos com base no id, combinando as propriedades dos objetos correspondentes.
+Função: mergeArrays(array1, array2)
 
-### `npm run build`
+Componentes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+TestComponent
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Este componente React utiliza as funções mencionadas acima e exibe os resultados na tela.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Estados
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+transformedUsers: Armazena os usuários filtrados e ordenados pela função transformData.
+apiUsers: Armazena os dados de usuários buscados da API e filtrados pela função fetchUserData.
+occurrences: Armazena o resultado da contagem de ocorrências de elementos pela função countOccurrences.
+groupedItems: Armazena os itens agrupados por categoria pela função groupByCategory.
+mergedArray: Armazena o array resultante da mesclagem de dois arrays de objetos pela função mergeArrays.
+Ciclo de Vida
+useEffect: Utilizado para realizar as operações assim que o componente é montado.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+myFunctions.js
 
-## Learn More
+Contém as funções utilitárias usadas para transformação de dados, busca de dados via API, contagem de ocorrências, agrupamento por categoria, e mesclagem de arrays.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+TestComponent.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Componente React que utiliza as funções de myFunctions.js e exibe os resultados no navegador.
 
-### Code Splitting
+Como Executar o Projeto
+Clone o repositório:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+bash
+Copiar código
+git clone https://github.com/seu-usuario/react-test-functions.git
+cd react-test-functions
 
-### Analyzing the Bundle Size
+Instale as dependências:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Execute o projeto:
 
-### Advanced Configuration
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Abra o navegador:
 
-### Deployment
+A aplicação estará disponível em http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Exemplo de Saída
 
-### `npm run build` fails to minify
+Ao rodar o componente TestComponent, você verá:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Usuários Filtrados e Ordenados: Uma lista de usuários ativos, ordenados por nome.
+Usuários da API: Uma lista de usuários cujos nomes de usuário começam com "C", obtidos da API.
+Contagem de Ocorrências: Um objeto mostrando quantas vezes cada fruta apareceu em uma lista.
+Agrupamento de Objetos: Um objeto que agrupa itens pela categoria "fruit" ou "vegetable".
+Arrays Mesclados: Um array de objetos que mescla dados de duas listas diferentes com base no id.
+Tecnologias Utilizadas
+React: Biblioteca JavaScript para construção de interfaces de usuário.
+Fetch API: Para buscar dados de uma API externa.
+JavaScript ES6+: Para manipulação de arrays e objetos.
